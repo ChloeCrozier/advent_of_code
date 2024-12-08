@@ -18,4 +18,5 @@ else:
 
     input_file = open(f'input/day{sys.argv[1]}.txt', 'w')
     input_file.write(page.text)
+    
     print(f'Input data saved to day{sys.argv[1]}.txt!')
