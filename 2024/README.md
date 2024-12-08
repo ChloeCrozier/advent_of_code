@@ -1,4 +1,7 @@
 # Advent of Code 2024
 
-1. Export your session ID to your .env variables with `AOC_SESSION_ID='{YOUR_SESSION_ID}'`. This is needed to get your input data for each day since it varies by user.
-2. Run `python get_input_data.py {DAY}` to save the input as a .txt file.
+1. AOC input data varies by user, so you need to add your session ID as a variable to your .env file: \
+- `AOC_SESSION_ID='{YOUR_SESSION_ID}'`
+
+3. To save the input as a .txt file, run: \
+- `python get_input_data.py {DAY}`
