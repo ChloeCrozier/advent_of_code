@@ -15,9 +15,9 @@ for line in data:
         splitMatch = re.split('(\d+)', match)
         p1Total += int(splitMatch[1]) * int(splitMatch[3])
 
-# Part 1 ---
+# Part 1 -----
 print(p1Total)
-# ----------
+# ------------
 
 multiply = True
 p2Total = 0
