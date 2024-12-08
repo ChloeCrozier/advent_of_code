@@ -12,8 +12,8 @@ for line in data:
 
 left.sort()
 right.sort()
-totalDist = 0
 
+totalDist = 0
 for i in range(len(left)):
     totalDist += max(left[i], right[i]) - min(left[i], right[i])
 
