@@ -93,6 +93,7 @@ for row in range(len(baseGrid)):
             while (r + rMove)  >= 0 and (r + rMove) < len(testGrid) and (c + cMove) >= 0 and (c + cMove) < len(testGrid[0]):
                 if testGrid[r + rMove][c + cMove] == '#' or testGrid[r + rMove][c + cMove] == 'O':
                     changeDir()
+                    # print(f"foudn o, {row}, {col}")
                 if testGrid[r + rMove][c + cMove] == '.':
                     testGrid[r + rMove][c + cMove] = 'X'
                     p2Count += 1
@@ -107,18 +108,18 @@ for row in range(len(baseGrid)):
                     if seen[((r + rMove), (c + cMove))] > 0:
                         seen[((r + rMove), (c + cMove))] -= 1
 
-                # print(len(seen), p2Count, seenCount)
-                if seenCount >= p2Count:
-                    if sum(seen.values()) == 0:
-                        loopCount += 1
-                        # print(p2Count, seenCount)
-                        # r = -2
-                        # c = -2
+                # # print(len(seen), p2Count, seenCount)
+                # if len(direction) > 2:
+                #     if sum(seen.values()) == 0:
+                #         loopCount += 1
+                #         # print(p2Count, seenCount)
+                #         # r = -2
+                #         # c = -2
 
-                    # for line in testGrid:
-                    #     print(line)
-                    # print(seen)
-                    break
+                #     # for line in testGrid:
+                #     #     print(line)
+                #     # print(seen)
+                #     break
 
                 r += rMove
                 c += cMove
@@ -129,6 +130,7 @@ for row in range(len(baseGrid)):
             #         print(line)
 
             testGrid[row][col] = '.'
-        print()
+            print(seen)
+        # print()
 
 print(loopCount)
