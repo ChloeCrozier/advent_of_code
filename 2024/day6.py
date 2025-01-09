@@ -108,18 +108,18 @@ for row in range(len(baseGrid)):
                     if seen[((r + rMove), (c + cMove))] > 0:
                         seen[((r + rMove), (c + cMove))] -= 1
 
-                # # print(len(seen), p2Count, seenCount)
-                # if len(direction) > 2:
-                #     if sum(seen.values()) == 0:
-                #         loopCount += 1
-                #         # print(p2Count, seenCount)
-                #         # r = -2
-                #         # c = -2
+                # print(len(seen), p2Count, seenCount)
+                if len(direction) > 2 and seenCount > p2Count:
+                    if sum(seen.values()) == 0:
+                        loopCount += 1
+                        # print(p2Count, seenCount)
+                        # r = -2
+                        # c = -2
 
-                #     # for line in testGrid:
-                #     #     print(line)
-                #     # print(seen)
-                #     break
+                    # for line in testGrid:
+                    #     print(line)
+                    # print(seen)
+                        break
 
                 r += rMove
                 c += cMove
@@ -130,7 +130,7 @@ for row in range(len(baseGrid)):
             #         print(line)
 
             testGrid[row][col] = '.'
-            print(seen)
+            # print(seen)
         # print()
 
 print(loopCount)
